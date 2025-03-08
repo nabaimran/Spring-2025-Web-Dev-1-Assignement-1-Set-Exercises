@@ -1,0 +1,36 @@
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Styling for the main recipe title */
+h1 {
+    color: #5d4037;
+    text-align: center;
+}
+
+/* Styling for headings */
+h2 {
+    color: #795548;
+    border-bottom: 2px solid #d7ccc8;
+    padding-bottom: 5px;
+}
+
+/* Style unordered (ingredients) and ordered (method) lists */
+ul, ol {
+    margin-left: 20px;
+}
+
+/* Style the list items */
+li {
+    margin: 5px 0;
+}
+
+/* Paragraph text styling */
+p {
+    font-size: 16px;
+    text-align: center;
+}
