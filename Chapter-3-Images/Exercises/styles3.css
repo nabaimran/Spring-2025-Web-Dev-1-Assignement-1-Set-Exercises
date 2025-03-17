@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #1e1e1e;
+    color: white;
+    padding: 20px;
+}
+
+h1 {
+    color: #f4f4f4;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+figure {
+    border: 2px solid #444;
+    padding: 10px;
+    background: #222;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: brightness(80%) contrast(120%) saturate(110%);
+    transition: 0.3s;
+}
+
+img:hover {
+    filter: none;
+}
+
+figcaption {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #aaa;
+}
