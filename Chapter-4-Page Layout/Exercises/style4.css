@@ -1,0 +1,115 @@
+/* Importing the Cormorant Garamond font */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,700&display=swap');
+
+/* Reset some defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cormorant Garamond', serif;
+  background-color: #f4f1fb;
+  color: #4b306a;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* Header Section */
+header {
+  background-color: #e3d2f3;
+  text-align: center;
+  padding: 20px;
+  font-size: 2rem;
+  border-bottom: 4px solid #cbb2df;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #decaf4;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+  border-bottom: 2px solid #cbb2df;
+}
+
+nav a {
+  text-decoration: none;
+  color: #6a4389;
+  font-size: 1.1rem;
+  padding: 5px 10px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #d1b3f0;
+}
+
+/* Layout Containers */
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  padding: 30px;
+}
+
+section, aside {
+  background-color: #f6ecfc;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(150, 120, 200, 0.2);
+}
+
+/* Section Headings */
+h2, h3 {
+  color: #573480;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+/* Buttons */
+button {
+  background-color: #d3b3f7;
+  color: #4b306a;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #c09fe4;
+}
+
+/* Course Items Grid */
+.course-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.course-box {
+  flex: 1;
+  min-width: 200px;
+  background-color: #f3e1ff;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(100, 50, 150, 0.1);
+}
+
+footer {
+  text-align: center;
+  background-color: #e3d2f3;
+  padding: 15px;
+  font-size: 0.9rem;
+  color: #6e549c;
+  border-top: 2px solid #cbb2df;
+  margin-top: 30px;
+}
