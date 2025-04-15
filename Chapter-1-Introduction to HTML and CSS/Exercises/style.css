@@ -1,35 +1,59 @@
-/* Page background and font styling */
+/* Import Cormorant Garamond */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,700&display=swap');
+
+/* Page background and base font styling */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #e0f7fa; /* soft pastel blue */
     color: #333;
     margin: 20px;
 }
 
 /* Main title styling */
 h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-style: italic;
     text-align: center;
-    color: #4CAF50;
-    border-bottom: 3px solid #4CAF50;
+    color: #4da6ff;
+    border-bottom: 3px solid #4da6ff;
     padding-bottom: 10px;
 }
 
 /* Section headings */
+h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
 h2 {
-    color: #2196F3;
-    border-bottom: 2px solid #ddd;
+    color: #3498db;
+    border-bottom: 2px solid #b3e5fc;
+    margin-top: 40px;
+}
+
+h3 {
+    color: #0077b6;
+}
+
+/* Paragraphs */
+p {
+    font-size: 18px;
 }
 
 /* Code block styling */
 pre {
-    background-color: #eee;
-    padding: 10px;
-    border-radius: 5px;
+    background-color: #f0faff;
+    padding: 12px;
+    border-radius: 6px;
+    border-left: 4px solid #81d4fa;
     overflow-x: auto;
 }
 
 /* Code text formatting */
 code {
     font-family: 'Courier New', monospace;
-    color: #d63384;
+    color: #006d77;
+    font-size: 16px;
 }
