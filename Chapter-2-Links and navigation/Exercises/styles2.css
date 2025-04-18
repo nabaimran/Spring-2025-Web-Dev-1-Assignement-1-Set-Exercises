@@ -1,103 +1,103 @@
-/* Global Styles */
+/* styles2.css */
+
+/* Font & Reset */
 body {
-    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #0a0f1e;
-    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FFF9EC;
+    color: #5B4B3A;
 }
 
-/* Navigation Bar */
+/* Navigation */
 nav {
-    background-color: #162447;
-    padding: 15px 0;
+    background-color: #FFE3B3;
+    padding: 1rem 0;
     text-align: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
+
 nav ul {
     list-style: none;
-    padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+    padding: 0;
 }
-nav ul li {
-    display: inline;
+
+nav li {
+    display: inline-block;
+    margin: 0 15px;
 }
-nav ul li a {
+
+nav a {
     text-decoration: none;
-    color: #ffffff;
-    font-size: 18px;
-    font-weight: 600;
+    color: #C76F38;
+    font-weight: bold;
+    font-size: 1rem;
     transition: color 0.3s;
 }
-nav ul li a:hover {
-    color: #e43f5a;
+
+nav a:hover {
+    color: #9A5123;
 }
 
 /* Header */
 header {
+    background: linear-gradient(to right, #FFF3C7, #FFE5B4);
+    padding: 60px 20px;
     text-align: center;
-    padding: 100px 20px 50px;
-    background: linear-gradient(to right, #162447, #1f4068);
+    border-bottom: 2px solid #FFD180;
 }
+
 header h1 {
-    font-size: 42px;
-    font-weight: bold;
-    color: #e43f5a;
+    font-size: 3rem;
+    color: #C76F38;
+    margin-bottom: 10px;
 }
+
 header p {
-    font-size: 20px;
-    opacity: 0.8;
+    font-size: 1.2rem;
+    color: #7B5E42;
 }
 
 /* Sections */
 section {
-    padding: 50px;
-    max-width: 900px;
-    margin: 0 auto;
-    background: #1b1b2f;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
-section:hover {
-    transform: scale(1.02);
-}
+
 section h2 {
-    font-size: 28px;
-    border-bottom: 3px solid #e43f5a;
-    padding-bottom: 10px;
-    color: #e43f5a;
+    color: #D97E35;
+    border-bottom: 2px solid #FFD180;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
 }
-section ul {
-    list-style: none;
-    padding: 0;
-}
-section ul li {
-    padding: 5px 0;
+
+ul li {
+    margin: 10px 0;
 }
 
 /* IMDb Button */
 .btn {
     display: inline-block;
-    padding: 15px 25px;
-    background-color: #e43f5a;
-    color: #ffffff;
-    font-size: 18px;
-    font-weight: bold;
+    padding: 12px 25px;
+    background-color: #FFD180;
+    color: #5B3C1F;
+    border-radius: 30px;
     text-decoration: none;
-    border-radius: 8px;
-    transition: background 0.3s, transform 0.2s;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
 .btn:hover {
-    background-color: #ff2e63;
+    background-color: #FFC46B;
     transform: scale(1.05);
+}
+
+/* Responsive Tweak */
+@media (max-width: 600px) {
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
 }

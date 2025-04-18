@@ -1,59 +1,33 @@
-/* Import Cormorant Garamond */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,700&display=swap');
-
-/* Page background and base font styling */
+/* Guide CSS - Professional pastel blue theme */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #e0f7fa; /* soft pastel blue */
-    color: #333;
-    margin: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #e8f4f8;
+  color: #333;
+  margin: 40px;
+  line-height: 1.6;
 }
 
-/* Main title styling */
-h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 700;
-    font-style: italic;
-    text-align: center;
-    color: #4da6ff;
-    border-bottom: 3px solid #4da6ff;
-    padding-bottom: 10px;
+h1, h2 {
+  color: #145da0;
 }
 
-/* Section headings */
-h2, h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 700;
-    font-style: italic;
+ul {
+  background-color: #fff;
+  padding: 15px;
+  border-left: 5px solid #92bde7;
+  margin-bottom: 20px;
+  list-style-type: square;
 }
 
-h2 {
-    color: #3498db;
-    border-bottom: 2px solid #b3e5fc;
-    margin-top: 40px;
-}
-
-h3 {
-    color: #0077b6;
-}
-
-/* Paragraphs */
-p {
-    font-size: 18px;
-}
-
-/* Code block styling */
 pre {
-    background-color: #f0faff;
-    padding: 12px;
-    border-radius: 6px;
-    border-left: 4px solid #81d4fa;
-    overflow-x: auto;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border: 1px dashed #aaa;
+  overflow-x: auto;
 }
 
-/* Code text formatting */
 code {
-    font-family: 'Courier New', monospace;
-    color: #006d77;
-    font-size: 16px;
+  font-family: "Courier New", monospace;
+  color: #d6336c;
 }
+

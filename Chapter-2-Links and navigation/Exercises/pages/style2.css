@@ -1,0 +1,91 @@
+/* General Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #2c2c2c;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Header Styling */
+header {
+  background-color: #8b0000; /* dark red like The Mentalist title card */
+  color: white;
+  padding: 30px 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+header p {
+  margin-top: 15px;
+  font-size: 1.1rem;
+}
+
+/* Navigation Styling */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #b22222;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #ff4d4d;
+}
+
+.button-link {
+  background-color: #444;
+  color: #fff;
+}
+
+.button-link:hover {
+  background-color: #666;
+}
+
+/* Section Content Styling */
+main {
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-style: italic;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #8b0000;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  border-top: 1px solid #ddd;
+  padding-top: 15px;
+  margin-top: 30px;
+}

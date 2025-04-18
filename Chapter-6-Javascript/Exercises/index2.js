@@ -1,94 +1,94 @@
-// RGB Color Guessing Game - JavaScript File
+let numSquares = 6;
+let colors = [];
+let pickedColor;
 
-let rgbDisplay = document.getElementById("rgbDisplay");
-let optionsContainer = document.getElementById("options");
-let resultText = document.getElementById("result");
-let livesText = document.getElementById("lives");
-let scoreText = document.getElementById("score");
-let restartBtn = document.getElementById("restartBtn");
+const squares = document.querySelectorAll(".square");
+const colorDisplay = document.getElementById("colorDisplay");
+const messageDisplay = document.getElementById("message");
+const h1 = document.querySelector("h1");
+const resetButton = document.getElementById("reset");
+const modeButtons = document.querySelectorAll(".mode");
 
-let correctColor = "";
-let lives = 3;
-let score = 0;
+init();
 
-// Utility function to generate random RGB
-function generateRandomColor() {
-    const r = Math.floor(Math.random() * 256);
-    const g = Math.floor(Math.random() * 256);
-    const b = Math.floor(Math.random() * 256);
-    return `rgb(${r}, ${g}, ${b})`;
+function init() {
+  setupModeButtons();
+  setupSquares();
+  reset();
 }
 
-// Create a new game round
-function generateGame() {
-    resultText.textContent = "";
-    optionsContainer.innerHTML = "";
-    
-    const correct = generateRandomColor();
-    correctColor = correct;
-    rgbDisplay.textContent = correct;
-
-    let colors = [correct];
-    while (colors.length < 3) {
-        let newColor = generateRandomColor();
-        if (!colors.includes(newColor)) {
-            colors.push(newColor);
-        }
-    }
-
-    colors = shuffle(colors);
-
-    colors.forEach(color => {
-        const box = document.createElement("div");
-        box.className = "color-box";
-        box.style.backgroundColor = color;
-        box.onclick = () => checkAnswer(color);
-        optionsContainer.appendChild(box);
+function setupModeButtons() {
+  modeButtons.forEach(button => {
+    button.addEventListener("click", function () {
+      modeButtons.forEach(btn => btn.classList.remove("selected"));
+      this.classList.add("selected");
+      numSquares = this.textContent === "Easy" ? 3 : 6;
+      reset();
     });
+  });
 }
 
-// Shuffle an array
-function shuffle(arr) {
-    for (let i = arr.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [arr[i], arr[j]] = [arr[j], arr[i]];
-    }
-    return arr;
+function setupSquares() {
+  squares.forEach(square => {
+    square.addEventListener("click", function () {
+      const clickedColor = this.style.backgroundColor;
+      if (clickedColor === pickedColor) {
+        messageDisplay.textContent = "Correct!";
+        changeColors(pickedColor);
+        h1.style.backgroundColor = pickedColor;
+        resetButton.textContent = "Play Again?";
+      } else {
+        this.style.opacity = "0";
+        messageDisplay.textContent = "Try Again";
+      }
+    });
+  });
 }
 
-// Check if user clicked the correct color
-function checkAnswer(color) {
-    if (color === correctColor) {
-        resultText.textContent = "Correct! 🎉";
-        score++;
+function reset() {
+  colors = generateRandomColors(numSquares);
+  pickedColor = pickColor();
+  colorDisplay.textContent = pickedColor.toUpperCase();
+  resetButton.textContent = "New Colors";
+  messageDisplay.textContent = "";
+  h1.style.backgroundColor = "#ffeaf4";
+
+  squares.forEach((square, i) => {
+    if (colors[i]) {
+      square.style.display = "block";
+      square.style.backgroundColor = colors[i];
+      square.style.opacity = "1";
     } else {
-        resultText.textContent = "Wrong! 😢";
-        lives--;
+      square.style.display = "none";
     }
-
-    updateStats();
-
-    if (lives > 0) {
-        setTimeout(generateGame, 1000);
-    } else {
-        resultText.textContent = `Game Over! Final Score: ${score}`;
-        optionsContainer.innerHTML = "";
-    }
+  });
 }
 
-// Update the score and lives display
-function updateStats() {
-    livesText.textContent = lives;
-    scoreText.textContent = score;
+resetButton.addEventListener("click", reset);
+
+function changeColors(color) {
+  squares.forEach(square => {
+    square.style.backgroundColor = color;
+    square.style.opacity = "1";
+  });
 }
 
-// Restart the game
-restartBtn.addEventListener("click", () => {
-    lives = 3;
-    score = 0;
-    updateStats();
-    generateGame();
-});
+function pickColor() {
+  const random = Math.floor(Math.random() * colors.length);
+  return colors[random];
+}
 
-// Start the game
-window.onload = generateGame;
+function generateRandomColors(num) {
+  const arr = [];
+  for (let i = 0; i < num; i++) {
+    arr.push(randomColor());
+  }
+  return arr;
+}
+
+function randomColor() {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  return `rgb(${r}, ${g}, ${b})`;
+}
